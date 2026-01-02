@@ -8,7 +8,7 @@ export interface ExperienceEntry {
 }
 
 export interface SocialLink {
-  platform: 'linkedin' | 'github' | 'instagram';
+  platform: 'linkedin' | 'github' | 'instagram' | 'email' | 'twitter';
   url: string;
 }
 

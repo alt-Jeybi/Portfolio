@@ -1,4 +1,4 @@
-import { FiMail, FiPhone, FiMessageCircle } from 'react-icons/fi';
+import { FiMail, FiPhone } from 'react-icons/fi';
 import { FaFacebookMessenger } from 'react-icons/fa';
 import { Card, CardHeader } from '../Card';
 import profileData from '../../data/profile.json';

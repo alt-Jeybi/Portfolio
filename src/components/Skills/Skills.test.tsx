@@ -47,6 +47,8 @@ const skillArbitrary: fc.Arbitrary<Skill> = fc.record({
 
 // Arbitrary for generating valid SkillCategory objects
 const skillCategoryArbitrary: fc.Arbitrary<SkillCategory> = fc.record({
+  id: fc.string({ minLength: 1, maxLength: 20 }).filter((s) => s.trim().length > 0),
+  name: fc.string({ minLength: 1, maxLength: 50 }).filter((s) => s.trim().length > 0),
   category: fc.constantFrom('frontend', 'backend', 'mobile', 'tools'),
   displayName: fc.string({ minLength: 1, maxLength: 50 }).filter((s) => s.trim().length > 0),
   skills: fc.array(skillArbitrary, { minLength: 1, maxLength: 10 }),
@@ -203,6 +205,8 @@ describe('Property 2: Skills section renders all categories with icons', () => {
   it('should use fallback icon when icon name is not in the icon map', () => {
     const categoryWithUnknownIcon: SkillCategory[] = [
       {
+        id: 'test-1',
+        name: 'Frontend',
         category: 'frontend',
         displayName: 'Frontend',
         skills: [{ name: 'Unknown Skill', icon: 'unknown-icon-xyz' }],

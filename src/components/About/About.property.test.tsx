@@ -1,7 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import * as fc from 'fast-check';
-import type { Profile } from '../../types';
 
 /**
  * **Feature: portfolio-website, Property 3: About section renders biography**

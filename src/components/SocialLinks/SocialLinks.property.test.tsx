@@ -125,9 +125,9 @@ describe('Property 13: Social links render with correct attributes', () => {
     expect(profileData.socialLinks).toBeDefined();
     expect(Array.isArray(profileData.socialLinks)).toBe(true);
 
-    profileData.socialLinks.forEach((link: SocialLink) => {
+    profileData.socialLinks.forEach((link) => {
       // Platform must be one of the valid values
-      expect(['linkedin', 'github', 'instagram']).toContain(link.platform);
+      expect(['linkedin', 'github', 'instagram', 'email', 'twitter']).toContain(link.platform);
 
       // URL must be a non-empty string
       expect(typeof link.url).toBe('string');

@@ -1,5 +1,4 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen, within } from '@testing-library/react';
 import * as fc from 'fast-check';
 import type { ExperienceEntry } from '../../types';
 import { sortExperienceByYear } from './Experience';

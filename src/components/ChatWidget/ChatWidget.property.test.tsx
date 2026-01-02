@@ -2,7 +2,6 @@ import { describe, it, expect, afterEach } from 'vitest';
 import { render, screen, cleanup, fireEvent } from '@testing-library/react';
 import * as fc from 'fast-check';
 import { ChatWidget } from './ChatWidget';
-import type { ChatMessage } from '../../types';
 
 /**
  * **Feature: portfolio-website, Property 16: Chat widget displays profile info when open**
@@ -48,7 +47,7 @@ describe('Property 16: Chat widget displays profile info when open', () => {
         cleanup();
         
         // Render with initial messages to ensure chat window can be opened
-        const { container } = render(
+        render(
           <ChatWidget name={name} avatar={avatar} initialMessages={[]} />
         );
         

@@ -9,8 +9,11 @@ class MockIntersectionObserver implements IntersectionObserver {
   readonly root: Element | Document | null = null;
   readonly rootMargin: string = '';
   readonly thresholds: ReadonlyArray<number> = [];
+  private callback: IntersectionObserverCallback;
   
-  constructor(private callback: IntersectionObserverCallback) {}
+  constructor(callback: IntersectionObserverCallback) {
+    this.callback = callback;
+  }
   
   observe(target: Element): void {
     // Immediately trigger callback with isIntersecting: true for tests
@@ -30,4 +33,4 @@ class MockIntersectionObserver implements IntersectionObserver {
   takeRecords(): IntersectionObserverEntry[] { return []; }
 }
 
-global.IntersectionObserver = MockIntersectionObserver;
+(globalThis as unknown as { IntersectionObserver: typeof MockIntersectionObserver }).IntersectionObserver = MockIntersectionObserver;

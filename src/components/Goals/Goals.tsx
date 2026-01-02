@@ -33,7 +33,7 @@ interface GoalItemProps {
   index: number;
 }
 
-function GoalItem({ goal, index }: GoalItemProps) {
+function GoalItem({ goal }: GoalItemProps) {
   return (
     <li className={styles.goalItem} data-testid="goal-item">
       <span className={styles.goalText} data-testid="goal-text">
