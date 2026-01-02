@@ -1,0 +1,133 @@
+/* ==========================================================================
+   Experience Component Styles
+   Timeline layout with circular markers and connecting line
+   ========================================================================== */
+
+.experienceCard {
+  height: 100%;
+}
+
+/* Timeline Container */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+/* Timeline Entry */
+.timelineEntry {
+  display: flex;
+  gap: var(--spacing-4);
+  position: relative;
+}
+
+.timelineEntry:last-child .line {
+  display: none;
+}
+
+/* Marker Container - holds marker and connecting line */
+.markerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 16px;
+}
+
+/* Circular Marker */
+.marker {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--color-gray-400);
+  background-color: var(--color-white);
+  flex-shrink: 0;
+  margin-top: 4px;
+  transition: all var(--transition-fast);
+}
+
+/* Current/Active Marker - filled */
+.markerCurrent {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Connecting Line */
+.line {
+  width: 2px;
+  flex-grow: 1;
+  background-color: var(--color-gray-200);
+  min-height: var(--spacing-6);
+}
+
+/* Content Area */
+.content {
+  flex: 1;
+  padding-bottom: var(--spacing-5);
+}
+
+/* Header with title and year */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-1);
+}
+
+/* Entry Title */
+.title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: var(--line-height-snug);
+}
+
+/* Year Badge */
+.year {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+}
+
+/* Description */
+.description {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: var(--line-height-normal);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+  .content {
+    padding-bottom: var(--spacing-6);
+  }
+  
+  .title {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  .timeline {
+    gap: 0;
+  }
+  
+  .marker {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .markerContainer {
+    width: 18px;
+  }
+}

@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Goals Component Styles
+   Goal statements in bordered containers with left accent
+   ========================================================================== */
+
+.goalsCard {
+  height: 100%;
+}
+
+.goalsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.goalItem {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-3) var(--spacing-4);
+  background-color: var(--color-background-secondary, #f9fafb);
+  border-radius: var(--border-radius-md, 8px);
+  border-left: 4px solid var(--color-primary, #3b82f6);
+  transition: background-color var(--transition-normal);
+}
+
+.goalItem:hover {
+  background-color: var(--color-background-tertiary, #f3f4f6);
+}
+
+.goalText {
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-relaxed, 1.625);
+}

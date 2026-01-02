@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Contact Card Component Styles
+   Bento-box card design for contact information
+   ========================================================================== */
+
+.contactCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.contactContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  flex: 1;
+}
+
+/* Availability Status Text */
+.availabilityText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: var(--line-height-relaxed);
+}
+
+/* CTA Link */
+.ctaLink {
+  display: inline-block;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.ctaLink:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Contact Buttons Container */
+.contactButtons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-2);
+}
+
+/* Individual Contact Button */
+.contactButton {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3) var(--spacing-4);
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--border-radius-md);
+  text-decoration: none;
+  color: var(--color-text-primary);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.contactButton:hover {
+  background-color: var(--color-bg-tertiary);
+  transform: translateX(4px);
+}
+
+/* Contact Icon */
+.contactIcon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+/* Contact Label */
+.contactLabel {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+  .contactButtons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--spacing-3);
+  }
+
+  .contactButton {
+    flex: 1;
+    min-width: fit-content;
+    justify-content: center;
+  }
+
+  .contactButton:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  .contactButtons {
+    flex-direction: column;
+  }
+
+  .contactButton {
+    justify-content: flex-start;
+  }
+
+  .contactButton:hover {
+    transform: translateX(4px);
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "certifications": [
+    {
+      "id": "cert-1",
+      "name": "IT Specialist - Device Configuration and Management",
+      "issuer": "Certiport - A Pearson VUE Business"
+    },
+    {
+      "id": "cert-2",
+      "name": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services"
+    },
+    {
+      "id": "cert-3",
+      "name": "Meta Front-End Developer Professional Certificate",
+      "issuer": "Meta (Coursera)"
+    },
+    {
+      "id": "cert-4",
+      "name": "Google UX Design Professional Certificate",
+      "issuer": "Google (Coursera)"
+    },
+    {
+      "id": "cert-5",
+      "name": "JavaScript Algorithms and Data Structures",
+      "issuer": "freeCodeCamp"
+    }
+  ]
+}

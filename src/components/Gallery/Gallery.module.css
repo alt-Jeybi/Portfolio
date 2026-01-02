@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Gallery Component Styles
+   Horizontal scrollable gallery with grayscale filter and color on hover
+   ========================================================================== */
+
+.galleryCard {
+  height: 100%;
+}
+
+/* Gallery Container - horizontal layout with scroll on mobile */
+.galleryContainer {
+  display: flex;
+  gap: var(--spacing-4);
+  overflow-x: auto;
+  padding-bottom: var(--spacing-2);
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar for cleaner look but keep functionality */
+.galleryContainer::-webkit-scrollbar {
+  height: 6px;
+}
+
+.galleryContainer::-webkit-scrollbar-track {
+  background: var(--color-gray-100);
+  border-radius: var(--border-radius-full);
+}
+
+.galleryContainer::-webkit-scrollbar-thumb {
+  background: var(--color-gray-300);
+  border-radius: var(--border-radius-full);
+}
+
+.galleryContainer::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-400);
+}
+
+/* Image Wrapper */
+.imageWrapper {
+  flex-shrink: 0;
+  border-radius: var(--border-radius-lg, 8px);
+  overflow: hidden;
+}
+
+/* Gallery Image - consistent height with grayscale filter */
+.galleryImage {
+  height: 180px;
+  width: auto;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%);
+  transition: filter var(--transition-normal), transform var(--transition-normal);
+}
+
+/* Color on hover */
+.galleryImage:hover {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .galleryImage {
+    height: 150px;
+  }
+}
+
+/* Mobile - enable horizontal scroll */
+@media (max-width: 767px) {
+  .galleryContainer {
+    margin-right: calc(-1 * var(--card-padding, var(--spacing-6)));
+    padding-right: var(--card-padding, var(--spacing-6));
+  }
+
+  .galleryImage {
+    height: 120px;
+  }
+}

@@ -1,0 +1,46 @@
+/* ==========================================================================
+   About Component Styles
+   Typography styles for biography paragraphs in bento card layout
+   ========================================================================== */
+
+.aboutCard {
+  height: 100%;
+}
+
+/* Biography Container */
+.biography {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+/* Biography Paragraphs */
+.paragraph {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* First paragraph slightly emphasized */
+.paragraph:first-child {
+  color: var(--color-text-primary);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+  .paragraph {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  .biography {
+    gap: var(--spacing-5);
+  }
+}

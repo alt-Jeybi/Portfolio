@@ -1,0 +1,291 @@
+/* ==========================================================================
+   ChatWidget Component Styles
+   Floating chat widget with expandable chat window
+   ========================================================================== */
+
+/* Floating Chat Button */
+.chatButton {
+  position: fixed;
+  bottom: var(--spacing-6);
+  right: var(--spacing-6);
+  width: 56px;
+  height: 56px;
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  z-index: var(--z-index-fixed);
+}
+
+.chatButton:hover {
+  background-color: var(--color-primary-dark);
+  transform: scale(1.05);
+}
+
+.chatButtonIcon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-gray-800);
+  color: var(--color-text-inverse);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-fast), visibility var(--transition-fast);
+  pointer-events: none;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--color-gray-800);
+}
+
+.chatButton:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Chat Window */
+.chatWindow {
+  position: fixed;
+  bottom: var(--spacing-6);
+  right: var(--spacing-6);
+  width: 360px;
+  max-height: 500px;
+  background-color: var(--color-bg-card);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  flex-direction: column;
+  z-index: var(--z-index-modal);
+  overflow: hidden;
+}
+
+
+/* Chat Header */
+.chatHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-4);
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+.chatAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius-full);
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.chatHeaderInfo {
+  flex: 1;
+}
+
+.chatHeaderName {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  margin: 0;
+}
+
+.chatHeaderStatus {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  font-size: var(--font-size-xs);
+  opacity: 0.9;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-success);
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: var(--color-text-inverse);
+  cursor: pointer;
+  padding: var(--spacing-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: opacity var(--transition-fast);
+}
+
+.closeButton:hover {
+  opacity: 1;
+}
+
+.closeButtonIcon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Messages Container */
+.messagesContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  min-height: 200px;
+  max-height: 300px;
+  background-color: var(--color-bg-secondary);
+}
+
+/* Message Bubble */
+.message {
+  max-width: 80%;
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius-lg);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+.messageUser {
+  align-self: flex-end;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-bottom-right-radius: var(--border-radius-sm);
+}
+
+.messageOwner {
+  align-self: flex-start;
+  background-color: var(--color-bg-card);
+  color: var(--color-text-primary);
+  border-bottom-left-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.messageContent {
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.messageTimestamp {
+  font-size: var(--font-size-xs);
+  opacity: 0.7;
+  margin-top: var(--spacing-1);
+  display: block;
+}
+
+/* Empty State */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--color-text-secondary);
+  text-align: center;
+  padding: var(--spacing-4);
+}
+
+.emptyStateText {
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+/* Chat Input */
+.chatInputContainer {
+  display: flex;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3);
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-bg-card);
+}
+
+.chatInput {
+  flex: 1;
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family-sans);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.chatInput:focus {
+  border-color: var(--color-primary);
+}
+
+.chatInput::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.sendButton {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-fast);
+}
+
+.sendButton:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.sendButton:disabled {
+  background-color: var(--color-gray-300);
+  cursor: not-allowed;
+}
+
+.sendButtonIcon {
+  width: 16px;
+  height: 16px;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+/* Mobile */
+@media (max-width: 767px) {
+  .chatWindow {
+    width: calc(100vw - var(--spacing-8));
+    max-width: 360px;
+    bottom: var(--spacing-4);
+    right: var(--spacing-4);
+  }
+
+  .chatButton {
+    bottom: var(--spacing-4);
+    right: var(--spacing-4);
+  }
+}

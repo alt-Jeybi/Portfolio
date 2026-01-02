@@ -1,0 +1,57 @@
+{
+  "categories": [
+    {
+      "id": "frontend",
+      "name": "Frontend",
+      "category": "frontend",
+      "displayName": "Frontend",
+      "skills": [
+        { "name": "HTML", "icon": "html5" },
+        { "name": "CSS", "icon": "css3" },
+        { "name": "JavaScript", "icon": "typescript" },
+        { "name": "React (Vite)", "icon": "react" },
+        { "name": "React Native", "icon": "react" },
+        { "name": "Flutter", "icon": "flutter" },
+        { "name": "Tailwind CSS", "icon": "tailwind" }
+      ]
+    },
+    {
+      "id": "backend",
+      "name": "Backend",
+      "category": "backend",
+      "displayName": "Backend",
+      "skills": [
+        { "name": "Node.js", "icon": "nodejs" },
+        { "name": "Firebase", "icon": "api" },
+        { "name": "Express", "icon": "express" },
+        { "name": "PostgreSQL", "icon": "postgresql" }
+      ]
+    },
+    {
+      "id": "mobile",
+      "name": "Mobile",
+      "category": "mobile",
+      "displayName": "Mobile",
+      "skills": [
+        { "name": "React Native", "icon": "react" },
+        { "name": "Flutter", "icon": "flutter" },
+        { "name": "iOS", "icon": "apple" },
+        { "name": "Android", "icon": "android" }
+      ]
+    },
+    {
+      "id": "tools",
+      "name": "Tools & Frameworks",
+      "category": "tools",
+      "displayName": "Tools",
+      "skills": [
+        { "name": "GitHub", "icon": "git" },
+        { "name": "VS Code", "icon": "vscode" },
+        { "name": "Figma", "icon": "figma" },
+        { "name": "Firebase Tools", "icon": "api" },
+        { "name": "Docker", "icon": "docker" },
+        { "name": "AWS", "icon": "aws" }
+      ]
+    }
+  ]
+}

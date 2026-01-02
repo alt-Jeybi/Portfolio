@@ -1,0 +1,64 @@
+{
+  "name": "John Jayvee Camila",
+  "verified": true,
+  "location": "Philippine, Laguna",
+  "title": "BSIT Student / Web Developer",
+  "avatar": "/images/Formal1.JPG",
+  "resumeUrl": "/resume.pdf",
+  "email": "johnjayvee.camila11.com",
+  "phone": "+1-555-123-4567",
+  "messengerUrl": "https://m.me/alexjohnson",
+  "bio": [
+    "I am a passionate web and mobile developer with a strong foundation in modern technologies and a keen eye for creating intuitive user experiences. With expertise spanning frontend frameworks like React and Vue to mobile development with React Native and Flutter, I bring ideas to life through clean, efficient code.",
+    "My journey in software development began during my computer science studies, where I discovered my love for building applications that solve real-world problems. I thrive in collaborative environments and enjoy tackling complex challenges that push the boundaries of what's possible."
+  ],
+  "experience": [
+    {
+      "id": "exp-1",
+      "title": "BS Information Technology - 4th Year",
+      "description": "Laguna State Polytechnic University - Siniloan",
+      "year": 2025,
+      "isCurrent": true
+    },
+    {
+      "id": "exp-2",
+      "title": "Junior Mobile Developer",
+      "description": "",
+      "year": 2025,
+      "isCurrent": false
+    },
+    {
+      "id": "exp-3",
+      "title": "Frontend Developer Intern",
+      "description": "",
+      "year": 2025,
+      "isCurrent": false
+    },
+    {
+      "id": "exp-4",
+      "title": "Started Computer Science Studies",
+      "description": "",
+      "year": 2021,
+      "isCurrent": false
+    }
+  ],
+  "goals": [
+    "Grow and build a strong career in IT through continuous learning and hands-on experience.",
+    "Improve my skills in software development and contribute to real-world impactful projects.",
+    "Collaborate with talented teams to create innovative solutions that make a difference."
+  ],
+  "socialLinks": [
+    {
+      "platform": "linkedin",
+      "url": "https://linkedin.com/in/alexjohnson"
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/alt-Jeybi?tab=overview&from=2025-12-01&to=2025-12-31"
+    },
+    {
+      "platform": "instagram",
+      "url": "https://github.com/alt-Jeybi?tab=overview&from=2025-12-01&to=2025-12-31"
+    }
+  ]
+}

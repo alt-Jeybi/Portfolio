@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Footer Component Styles
+   Matches bento design aesthetic with centered text
+   ========================================================================== */
+
+.footer {
+  padding: var(--spacing-8) 0;
+  margin-top: var(--spacing-8);
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  text-align: center;
+}
+
+.copyright {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  margin: 0;
+}

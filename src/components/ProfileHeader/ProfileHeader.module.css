@@ -1,0 +1,208 @@
+/* ==========================================================================
+   ProfileHeader Component Styles
+   Horizontal layout with avatar, info, and action buttons
+   ========================================================================== */
+
+.profileHeader {
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-6);
+  text-align: center;
+}
+
+/* Avatar */
+.avatarWrapper {
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--border-radius-full);
+  object-fit: cover;
+  border: var(--border-width-thick) solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Info Section */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+}
+
+.name {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: var(--line-height-tight);
+}
+
+.verifiedBadge {
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-1);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.locationIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: var(--line-height-normal);
+}
+
+/* Action Buttons */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  width: 100%;
+  max-width: 280px;
+}
+
+.btnPrimary,
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3) var(--spacing-5);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--border-radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  border: var(--border-width-medium) solid transparent;
+}
+
+.btnPrimary {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary);
+}
+
+.btnPrimary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btnPrimary:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.btnSecondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btnSecondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btnSecondary:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+/* Tablet (768px+) - Horizontal layout */
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: var(--spacing-6);
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .info {
+    flex: 1;
+    align-items: flex-start;
+  }
+
+  .nameRow {
+    justify-content: flex-start;
+  }
+
+  .location {
+    justify-content: flex-start;
+  }
+
+  .actions {
+    flex-direction: row;
+    width: auto;
+    max-width: none;
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  .avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  .name {
+    font-size: var(--font-size-3xl);
+  }
+
+  .title {
+    font-size: var(--font-size-lg);
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    padding: var(--spacing-3) var(--spacing-6);
+    font-size: var(--font-size-base);
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "Q-RUSH",
+      "description": "Barangay Queuing & Appointment System",
+      "thumbnail": "/images/projects/qrush.jpg",
+      "technologies": ["React", "Node.js", "Firebase"],
+      "liveUrl": "https://bangkalqrush.com",
+      "repoUrl": null,
+      "featured": true
+    },
+    {
+      "id": "proj-2",
+      "title": "TaskFlow",
+      "description": "Collaborative task management with real-time updates",
+      "thumbnail": "/images/projects/taskflow.jpg",
+      "technologies": ["React", "TypeScript", "PostgreSQL"],
+      "liveUrl": "https://taskflow-demo.example.com",
+      "repoUrl": "https://github.com/example/taskflow",
+      "featured": true
+    },
+    {
+      "id": "proj-3",
+      "title": "WeatherNow",
+      "description": "Interactive weather dashboard with forecasts",
+      "thumbnail": "/images/projects/weathernow.jpg",
+      "technologies": ["React", "API Integration", "CSS"],
+      "liveUrl": "https://weathernow.example.com",
+      "repoUrl": "https://github.com/example/weathernow",
+      "featured": true
+    },
+    {
+      "id": "proj-4",
+      "title": "FitTrack",
+      "description": "Mobile fitness tracking application",
+      "thumbnail": "/images/projects/fittrack.jpg",
+      "technologies": ["React Native", "Firebase", "Node.js"],
+      "liveUrl": null,
+      "repoUrl": "https://github.com/example/fittrack",
+      "featured": true
+    },
+    {
+      "id": "proj-5",
+      "title": "BlogCMS",
+      "description": "Headless content management system",
+      "thumbnail": "/images/projects/blogcms.jpg",
+      "technologies": ["Node.js", "Express", "MongoDB"],
+      "liveUrl": "https://blogcms.example.com",
+      "repoUrl": "https://github.com/example/blogcms",
+      "featured": false
+    },
+    {
+      "id": "proj-6",
+      "title": "ChatConnect",
+      "description": "Real-time messaging platform",
+      "thumbnail": "/images/projects/chatconnect.jpg",
+      "technologies": ["React", "Socket.io", "Node.js"],
+      "liveUrl": "https://chatconnect.example.com",
+      "repoUrl": "https://github.com/example/chatconnect",
+      "featured": false
+    }
+  ]
+}

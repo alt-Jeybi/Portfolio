@@ -1,0 +1,122 @@
+/* ==========================================================================
+   BentoGrid Layout - CSS Grid Implementation
+   ========================================================================== */
+
+.bentoGrid {
+  display: grid;
+  gap: var(--grid-gap);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-6);
+  
+  /* Smooth transitions between breakpoints */
+  transition: gap var(--transition-normal), padding var(--transition-normal);
+  
+  /* Desktop: 4-column grid */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "profile profile profile profile"
+    "about about experience experience"
+    "techstack techstack projects projects"
+    "certifications certifications certifications certifications"
+    "goals sociallinks contact contact"
+    "gallery gallery gallery gallery";
+}
+
+/* Grid Area Assignments */
+.profileHeaderArea {
+  grid-area: profile;
+}
+
+.aboutArea {
+  grid-area: about;
+}
+
+.experienceArea {
+  grid-area: experience;
+}
+
+.techStackArea {
+  grid-area: techstack;
+}
+
+.projectsArea {
+  grid-area: projects;
+}
+
+.certificationsArea {
+  grid-area: certifications;
+}
+
+.goalsArea {
+  grid-area: goals;
+}
+
+.socialLinksArea {
+  grid-area: sociallinks;
+}
+
+.contactArea {
+  grid-area: contact;
+}
+
+.galleryArea {
+  grid-area: gallery;
+}
+
+/* Ensure child components fill their grid areas */
+.profileHeaderArea > *,
+.aboutArea > *,
+.experienceArea > *,
+.techStackArea > *,
+.projectsArea > *,
+.certificationsArea > *,
+.goalsArea > *,
+.socialLinksArea > *,
+.contactArea > *,
+.galleryArea > * {
+  height: 100%;
+}
+
+/* ==========================================================================
+   Tablet Breakpoint (768px - 1024px)
+   ========================================================================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "profile profile"
+      "about experience"
+      "techstack projects"
+      "certifications certifications"
+      "goals sociallinks"
+      "contact contact"
+      "gallery gallery";
+    padding: var(--spacing-4);
+    gap: var(--grid-gap-sm);
+  }
+}
+
+/* ==========================================================================
+   Mobile Breakpoint (< 768px)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "profile"
+      "about"
+      "experience"
+      "techstack"
+      "projects"
+      "certifications"
+      "goals"
+      "sociallinks"
+      "contact"
+      "gallery";
+    padding: var(--spacing-4);
+    gap: var(--grid-gap-sm);
+  }
+}

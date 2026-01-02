@@ -1,0 +1,39 @@
+{
+  "images": [
+    {
+      "id": "img-1",
+      "src": "/images/gallery/photo1.jpg",
+      "alt": "Working on a coding project"
+    },
+    {
+      "id": "img-2",
+      "src": "/images/gallery/photo2.jpg",
+      "alt": "Team collaboration session"
+    },
+    {
+      "id": "img-3",
+      "src": "/images/gallery/photo3.jpg",
+      "alt": "Tech conference presentation"
+    },
+    {
+      "id": "img-4",
+      "src": "/images/gallery/photo4.jpg",
+      "alt": "Hackathon participation"
+    },
+    {
+      "id": "img-5",
+      "src": "/images/gallery/photo5.jpg",
+      "alt": "Office workspace setup"
+    },
+    {
+      "id": "img-6",
+      "src": "/images/gallery/photo6.jpg",
+      "alt": "Community meetup event"
+    },
+    {
+      "id": "img-7",
+      "src": "/images/gallery/photo7.jpg",
+      "alt": "Award ceremony"
+    }
+  ]
+}

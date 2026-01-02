@@ -1,0 +1,79 @@
+/* ==========================================================================
+   TechStack Component Styles
+   Categorized skills displayed as pill-shaped tags
+   ========================================================================== */
+
+.techStackCard {
+  height: 100%;
+}
+
+/* Categories Container */
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-5);
+}
+
+/* Individual Category */
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+/* Category Name Heading */
+.categoryName {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: var(--line-height-tight);
+}
+
+/* Skills Container - flex wrap for tags */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+/* Pill-shaped Skill Tag */
+.skillTag {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-1) var(--spacing-3);
+  background-color: var(--color-gray-800);
+  color: var(--color-white);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border-radius: 9999px;
+  white-space: nowrap;
+  transition: background-color var(--transition-fast);
+}
+
+.skillTag:hover {
+  background-color: var(--color-gray-700);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+  .categories {
+    gap: var(--spacing-4);
+  }
+
+  .skillTag {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-1) var(--spacing-3);
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  .categories {
+    gap: var(--spacing-5);
+  }
+}

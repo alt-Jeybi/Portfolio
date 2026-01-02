@@ -1,0 +1,53 @@
+/* ==========================================================================
+   SocialLinks Component Styles
+   Card displaying social media links with icons and platform names
+   ========================================================================== */
+
+.socialLinksCard {
+  height: 100%;
+}
+
+.socialButtonsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.socialButton {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3) var(--spacing-4);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--border-radius-md);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.socialButton:hover {
+  background-color: var(--color-bg-tertiary);
+  transform: translateX(4px);
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.socialLabel {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+/* Tablet and up (768px+) */
+@media (min-width: 768px) {
+  .socialButton {
+    padding: var(--spacing-3) var(--spacing-5);
+  }
+}
